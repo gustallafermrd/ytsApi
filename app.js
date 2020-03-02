@@ -1,10 +1,10 @@
 const latestMovies = document.querySelector('.latest-movies');
 const upcomingMovies = document.querySelector('.upcoming-movies');
 function traer() {
-  fetch('https://yts.mx/api/v2/list_movies.json')
+  fetch('https://yts.mx/api/v2/list_movies.json?sort=year')
   .then(res => res.json())
   .then(latest => {
-    //console.log(latest.data.movies);
+    console.log(latest.data.movies);
     //console.log(latest.data.movies[0].medium_cover_image);
     pelis = latest.data.movies;
     let html = '';
